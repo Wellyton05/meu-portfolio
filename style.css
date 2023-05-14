@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;1,500;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    overflow: auto;
+}
+
+.fundo {
+    background-color: gray;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.header-link{
+    cursor: pointer;
+    font-weight: 300;
+    gap: 180px;
+    display: flex;
+}
+
+.header-link a {
+    color: white;
+    font-size: 25px;
+}
+
+.header-link a:hover{
+    color: rgb(43, 226, 141);
+}
+
+.botao-contato {
+    color: rgb(43, 226, 141);
+    background: transparent;
+    border: solid 2px rgb(43, 226, 141);
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 12px;
+    width: 150px;
+    cursor: pointer;
+}
+
+.botao-contato:hover {
+    background-color: rgb(43, 226, 141);
+    color: white;
+}
+
+.texto-home, .sobre {
+    color: white;
+}
+
+.texto-home h3, .sobre h1{
+    font-size: 30px;
+}
+
+.texto-home h1 {
+    font-size: 30px;
+}
+
+.texto-home p {
+    padding-left: 0;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-weight: 300;  
+    display: flex;
+} 
+
+#home {
+    padding: 150px 0 0 130px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.redes a {
+    padding: 30px;
+    padding-left: 0;
+    color: rgb(43, 226, 141) ;
+}
+
+.redes a:hover{
+    color: white;
+}
+
+.redes-img {
+    max-width: 40px;
+    max-height: 25px;
+    width: auto;
+    height: auto;
+}
+
+#meu-nome {
+    color: rgb(43, 226, 141);
+    opacity: 0;    
+    animation: fadeInText 0s 1.1s both;
+}
+
+#titulo-home {
+    opacity: 0;    
+    animation: fadeInText 0s 1.1s both;
+}
+
+.text-block {
+    position: relative;
+    overflow: hidden;
+}
+
+.text-block:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(43, 226, 141);
+    transform: translateX(-100%);
+    animation: enlargeBlock 0.5s 0.6s both, revealBlock 0.5s 1.1s both;
+  }
+
+  @keyframes enlargeBlock {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes revealBlock {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.border-redes {
+    border: solid 2px white;
+    border-radius: 30px;
+    padding: 5px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.logo {
+    color: white;
+    max-width: 180px;
+    max-height: 115px;
+    width: auto;
+    height: auto;
+    border-radius: 50px;
+    border: 2px solid transparent;
+}
+
+#logo-margin {
+    margin-right: 35%;
+}
+
+
+#img-pc {
+    max-width: 550px;
+    max-height: 550px;
+    width: auto;
+    height: auto;
+    margin-left: 50%;
+}
+
+
+#contato {
+    text-align: center;
+    border: 5px solid rgb(43, 226, 141);
+    border-radius: 7px;
+    width: 33%;
+    padding: 30px;
+    margin: 0 auto;
+    margin-top: 12%;
+    background-color: rgb(160, 160, 160);
+    box-shadow: 1px 2px 2px black;
+}
+
+#titulo-contato {
+    color: rgb(43, 226, 141);
+    padding: 0 0 0 0;
+    text-align: center;
+}
+
+#subtitulo-contato {
+    color: rgb(43, 226, 141);
+    padding: 0 0 0 0;
+    text-align: center;
+}
+
+.campo {
+    margin-bottom: 1em;
+}
+
+.campo label {
+    color:white ;
+    padding: 0;
+    border-radius: 10px;
+}
+
+.campo textarea {
+    display: block;
+    margin-left: 130px;
+    margin-top: 10px;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 5px;
+    background-color: rgb(194, 212, 204);
+}
+
+.campo select option {
+    padding-right: 1em;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.enviar {
+    color: white;
+    background: transparent;
+    border: solid 3px rgb(43, 226, 141);
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 12px;
+    width: 150px;
+    cursor: pointer;
+}
+
+.enviar:hover {
+    background-color: rgb(43, 226, 141);
+    color: white;
+}
+
+#nome, #email, #motivo, #mensagem {
+    border: 3px solid rgb(43, 226, 141);
+    padding: 5px;
+    background-color: rgb(211, 223, 217);
+    border-radius: 5px;
+}
+
+.sobre {
+    text-align: center;
+    border: 5px solid rgb(43, 226, 141);
+    border-radius: 30px;
+    width: 40%;
+    padding: 50px;
+    margin: 0 auto;
+    background-color: rgb(160, 160, 160);
+    box-shadow: 1px 2px 2px black;
+    margin-top: 12%;
+}
+
+.sobre h1 {
+    color: rgb(43, 226, 141);
+}
+
+#minhafoto {
+    max-width: 500px;
+    max-height: 300px;
+    border: 1px solid rgb(43, 226, 141);
+    border-radius: 30px;
+    box-shadow: 1px 2px 2px rgb(43, 226, 141);
+}
+
+.foto {
+    margin: 50px;
+}
+
+#estudos {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 3rem 0;
+    margin-top: 12%;
+
+}
+
+.card-estudos{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+    border-radius: 100px;
+    margin: 3rem 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(160, 160, 160);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    color: white;
+}
+
+.card-text {
+    width: 40%;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.dentro-card  {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dentro-card::before {
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: block;
+    border: 2px solid rgb(43, 226, 141);
+    opacity: 0;
+    transition: 0.5s ease-in-out ;
+}
+
+.dentro-card h2 {
+    font-size: 40px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.dentro-card p {
+    font-size: 0;
+    visibility: visible;
+    opacity: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.5s ease-in-out;
+    text-transform: uppercase;
+    color: rgb(43, 226, 141);
+}
+
+.card:hover > .dentro-card:before {
+    height: 250px;
+    width: 250px;
+    opacity: 1;
+}
+
+.card:hover > .dentro-card p {
+    visibility: visible;
+    opacity: 1;
+    font-size: 14px;
+}
+
+footer {
+    background-color: rgb(160, 160, 160);
+    margin-top: 15%;
+    display: flex;
+}
+
+.rodape-text {
+    color: white;
+    margin-left: 1%;
+    padding: 10px 0 10px 0 ;
+}
+
+.wpp {
+    position: absolute;
+    right: 0;    
+    margin: 35px 50px 0 0;
+}
+
+
+
+
+
+
