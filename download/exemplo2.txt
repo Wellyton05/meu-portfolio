@@ -1,0 +1,36 @@
+Faça um programa que receba um valor n, e imprima a contagem regressiva a partir deste valor. Por exemplo, se
+o usuário digitar 5, o programa irá imprimir 5, 4, 3, 2, 1, 0. 
+
+#include <stdio.h>
+#include <locale.h>
+
+void contagem_regressiva( int num ){
+    if( num == -1 ) return;
+    printf( "\t%d", num );O
+    contagem_regressiva(num-1);
+    //nesse caso, vai percorrendo e mostrando ao mesmo tempo (começa a contar do 5)
+}
+
+void contagem_progressiva( int num ){
+    if( num == -1 ) return;
+    contagem_progressiva(num-1);
+    printf( "\t%d", num );
+    //nesse caso percorre e depois começa a mostrar (chega até o 0 dps conta)
+}
+
+int main(){
+    setlocale( LC_ALL, "Portuguese" );
+
+    int num;
+
+    do{
+        printf( "Entre com o número (>=0): " );
+        scanf( "%d", &num );
+    }while( num<0);
+
+    printf( "\nContagem Regressiva:" );
+    contagem_regressiva(num);
+    printf( "\nContagem Progressiva:" );
+    contagem_progressiva(num);
+    printf( "\n" );
+}
